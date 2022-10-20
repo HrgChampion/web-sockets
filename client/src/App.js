@@ -6,6 +6,7 @@ import {useEffect,useState} from "react";
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
+import Speech from "./Speech";
 
 const socket = io.connect("http://localhost:3001")
 function App() {
@@ -35,6 +36,7 @@ console.log(data)
         renderInput={(params) => <TextField {...params} label="Command" onChange={sendMessage}/>}
       />
       </Stack>
+      <Speech/>
     </div>
   );
 }
